@@ -39,7 +39,7 @@ namespace APICatalogo.Controllers
             }
         }
 
-        [HttpGet("{id:int}", Name = "ObterProduto")]
+        [HttpGet("{id:int}")]
         public ActionResult<Usuario> Get(int id)
         {
             var usuario = _context.Usuarios.FirstOrDefault(u => u.UsuarioId == id);
@@ -93,5 +93,6 @@ namespace APICatalogo.Controllers
 
             return Ok(usuario);
         }
+        
     }
 }
